@@ -5,7 +5,7 @@ no_format = True
 
 while no_format:
     format_pwd = user_pwd.replace(" ", "")
-    print() if format_pwd == user_pwd else print(f"Password formatted to: {format_pwd}") #Omit formatting if unnecessary
+    print() if format_pwd == user_pwd else print(f"Password formatted to: {format_pwd}\n") #Omit formatting if unnecessary
     no_format = False
 
 def fortify_pass(pwd):
@@ -27,7 +27,7 @@ def fortify_pass(pwd):
         if not re.search(r'[!@#$%^&*(),.?":{}|<>]', pwd):
             pwd = input("Include at least one symbol: ")
         
-        # Re-check if the password now meets the requirements
+        #Re-check if the password now meets the requirements
         if len(pwd) >= 12 and re.search(r'[0-9]', pwd) and re.search(r'[!@#$%^&*(),.?":{}|<>]', pwd):
             minimum_req = True
 
