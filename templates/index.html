@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block head %}
+<h1>Fortify</h1>
+{% endblock %}
+
+{% block body %}
+<h2>Password Strength Checker</h2>
+<form method="POST">
+    <label for="password">Enter Password:</label>
+    <input type="password" name="password" id="password" required>
+    <button type="submit">Check Strength</button>
+</form>
+{% endblock %}
