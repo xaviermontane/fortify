@@ -13,12 +13,6 @@ hr {
     color: grey;
 }
 
-footer {
-    color: grey;
-    text-align: center;
-    padding: 5px;
-}
-
 .navbar {
     background-color: white;
     padding: 0 32px;
@@ -51,21 +45,40 @@ footer {
     color: #333;
 }
 
+.form-title {
+    text-align: center;
+    margin-top: 62px;
+}
+
 form {
+    text-align: center;
     margin-bottom: 20px;
 }
 
+input {
+    width: 40vh;
+}
+
 input, button {
+    border-style: solid;
+    border-radius: 8px;
     padding: 10px;
     margin: 10px 0;
 }
 
 button {
     background-color: #4CAF50;
+    border-color: #4CAF50;
     color: white;
     cursor: pointer;
 }
 
 button:hover {
     background-color: #45a049;
+}
+
+footer {
+    color: grey;
+    text-align: center;
+    padding: 5px;
 }
