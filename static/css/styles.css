@@ -45,7 +45,12 @@ hr {
     color: #333;
 }
 
-.form-title {
+.form-container {
+    margin-bottom: 50vh;
+}
+
+.form-container h2 {
+    font-weight: 800;
     text-align: center;
     margin-top: 62px;
 }
@@ -80,5 +85,5 @@ button:hover {
 footer {
     color: grey;
     text-align: center;
-    padding: 5px;
+    bottom: 0;
 }

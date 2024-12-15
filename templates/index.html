@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
-{% block head %}
-<h1>Fortify</h1>
-{% endblock %}
+{% block title %}Home{% endblock %}
 
-{% block body %}
-<h2 class="form-title">Password Strength Checker</h2>
-<form method="POST">
-    <input type="password" name="password" id="password" required>
-    <button type="submit">Check Strength</button>
-</form>
+{% block content %}
+<div class="form-container">
+    <h2>{{ title }}</h2>
+    <form method="POST">
+        <input type="password" name="password" id="password" required>
+        <button type="submit">Check Strength</button>
+    </form>
+</div>
 {% endblock %}
 
 {% block scripts %}
