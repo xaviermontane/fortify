@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Generate Password{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{{ title }}</h2>
+    <form method="POST">
+        <label for="length">Select Password Length:</label>
+        <select name="length" id="length" required>
+            <option value="8">8</option>
+            <option value="12" selected>12</option>
+            <option value="16">16</option>
+            <option value="20">20</option>
+            <option value="24">24</option>
+            <option value="32">32</option>
+            <option value="64">64</option>
+        </select>
+        <button type="submit" id="generate">Generate</button>
+    </form>
+</div>
+{% if password %}
+<div class="password-container">
+    <h3>Your Password:</h3>
+    <input type="text" value="{{ password }}" readonly>
+    <button id="copy">Copy</button>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/generate.js') }}"></script>
+{% endblock %}

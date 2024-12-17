@@ -45,10 +45,6 @@ hr {
     color: #333;
 }
 
-.form-container {
-    margin-bottom: 50vh;
-}
-
 .form-container h2 {
     font-weight: 800;
     text-align: center;
@@ -80,6 +76,17 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+button#generate {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.password-container {
+    text-align: center;
+    margin-top: 50px;
 }
 
 footer {
