@@ -46,7 +46,7 @@ hr {
 }
 
 #strength-details {
-    margin: 20px;
+    margin: 0 20px;
     padding: 12px;
     text-align: center;
 }
@@ -59,7 +59,6 @@ hr {
 
 form {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .input-container {

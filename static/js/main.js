@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const passwordForm = document.getElementById("password-form");
     const passwordInput = document.getElementById("password");
     const cloakButton = document.getElementById("toggle-view");
     const checkStrengthButton = document.getElementById("check-strength");
@@ -96,5 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
             passwordInput.type = "password";
             document.getElementById("toggle-image").src = "/static/images/password_show.svg";
         }
+    });
+
+    passwordForm.addEventListener("submit", (e) => {
+        e.preventDefault();
     });
 });
