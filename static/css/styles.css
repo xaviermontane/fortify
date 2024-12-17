@@ -113,6 +113,22 @@ button#generate {
     margin-top: 20px;
 }
 
+#options-wp {
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 26px;
+    padding: 40px;
+    border: 1px black solid;
+    box-shadow: #4CAF50 10px 10px;
+    border-radius: 8px;
+}
+
+#options-wp h3 {
+    margin: 0 0 20px;
+}
+
 .password-container {
     text-align: center;
     margin-top: 50px;
