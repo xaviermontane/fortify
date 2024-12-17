@@ -6,11 +6,14 @@
 <div class="form-container">
     <h2>{{ title }}</h2>
     <form method="POST">
-        <input type="password" name="password" id="password" required>
+        <div class="input-container">
+            <input type="password" name="password" id="password" placeholder="Enter your password…" required>
+            <button type="button" id="toggle-view"><img src="/static/images/password_show.svg" width=20px height=20px id="toggle-image"></img></button>
+        </div>
         <button type="button" id="check-strength">Check Strength</button>
     </form>
 </div>
-</div><div id="strength-details"></div></div>
+<div id="strength-details"></div>
 {% endblock %}
 
 {% block scripts %}

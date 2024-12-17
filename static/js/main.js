@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const passwordInput = document.getElementById("password");
+    const cloakButton = document.getElementById("toggle-view");
     const checkStrengthButton = document.getElementById("check-strength");
     const strengthDetails = document.getElementById('strength-details');
 
@@ -85,5 +86,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>Password Details</h3>
         <p><strong>Cracking Time:</strong> ${evaluation.crackingTime}</p>
         `;
+    });
+
+    cloakButton.addEventListener("click", () => {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            document.getElementById("toggle-image").src = "/static/images/password_hide.svg";
+        } else {
+            passwordInput.type = "password";
+            document.getElementById("toggle-image").src = "/static/images/password_show.svg";
+        }
     });
 });

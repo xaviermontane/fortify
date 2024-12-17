@@ -62,8 +62,32 @@ form {
     margin-bottom: 20px;
 }
 
+.input-container {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+}
+
 input {
     width: 40vh;
+}
+
+input#password {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+#toggle-view {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-70%);
+    background: none;
+    border: none;
+    outline: none;
 }
 
 input, button {
