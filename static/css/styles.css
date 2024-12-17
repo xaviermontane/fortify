@@ -45,6 +45,12 @@ hr {
     color: #333;
 }
 
+#strength-details {
+    margin: 20px;
+    padding: 12px;
+    text-align: center;
+}
+
 .form-container h2 {
     font-weight: 800;
     text-align: center;
