@@ -15,5 +15,9 @@ def generate():
         password = generate_password(length)
     return render_template("generate.html", title="Password Generator", password=password)
 
+@app.route("/about")
+def about():
+    return render_template("about.html", title="About Us")
+
 if __name__ == "__main__":
     app.run(debug=True)

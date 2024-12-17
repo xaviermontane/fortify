@@ -95,6 +95,12 @@ button#generate {
     margin-top: 50px;
 }
 
+#img-centered {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
 footer {
     color: grey;
     text-align: center;
