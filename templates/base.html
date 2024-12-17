@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fortify your passwords with this intuitive webapp.">
+    <title>Fortify - {% block title %}{% endblock %}</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/fortify.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>FORTIFY</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/generate">Generate</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fortify. All rights reserved.</p>
+    </footer>
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>
