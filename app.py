@@ -4,8 +4,8 @@ from main import generate_password
 app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
-def index():
-    return render_template("index.html", title="Password Strength Checker")
+def fortify():
+    return render_template("fortify.html", title="Password Strength Checker")
 
 @app.route("/generate", methods=["GET", "POST"])
 def generate():
