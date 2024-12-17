@@ -22,8 +22,8 @@
 {% if password %}
 <div class="password-container">
     <h3>Your Password:</h3>
-    <input type="text" value="{{ password }}" readonly>
-    <button id="copy">Copy</button>
+    <input id="password" type="text" value="{{ password }}" readonly>
+    <button id="copy" onclick="copyText()">Copy</button>
 </div>
 {% endif %}
 {% endblock %}
