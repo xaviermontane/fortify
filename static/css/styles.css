@@ -133,6 +133,7 @@ button#generate {
     margin: 0;
     padding: 0;
     width: 32px;
+    cursor: pointer;
     display: block;
 }
 
@@ -141,6 +142,22 @@ button#generate {
     justify-content: space-between;
     align-items: center;
     margin: 0;
+}
+
+#custom-strength {
+    color: white;
+    background-color: #4CAF50;
+    margin-right: 40px;
+    appearance: none;
+    padding: 6px;
+    width: 6%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#custom-strength:hover, #custom-strength:focus {
+    cursor: pointer;
+    outline: none;
 }
 
 .password-container {
