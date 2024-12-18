@@ -121,12 +121,26 @@ button#generate {
     margin: 26px;
     padding: 40px;
     border: 1px black solid;
-    box-shadow: #4CAF50 10px 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 8px;
 }
 
 #options-wp h3 {
     margin: 0 0 20px;
+}
+
+#password-options input {
+    margin: 0;
+    padding: 0;
+    width: 32px;
+    display: block;
+}
+
+#password-options label {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
 }
 
 .password-container {
