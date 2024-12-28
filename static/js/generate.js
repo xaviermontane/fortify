@@ -13,22 +13,12 @@ passwordLengthInput.addEventListener("input", (e) => {
 
 strengthButton.addEventListener("change", (e) => {
     const strength = e.target.value;
-    let newLength;
-    switch (strength) {
-        case "trolling":
-            newLength = 8;
-            break;
-        case "weak":
-            newLength = 8;
-            break;
-        case "secure":
-            newLength = 32;
-            break;
-        case "hax0r":
-            newLength = 64;
-            break;
-        default:
-            newLength = 12;
-    }
-    passwordLengthInput.value = newLength;
+    const lengthMap = {
+        trolling: 8,
+        weak: 8,
+        secure: 32,
+        hax0r: 64,
+        default: 12
+    };
+    passwordLengthInput.value = lengthMap[strength] || lengthMap.default;
 });
