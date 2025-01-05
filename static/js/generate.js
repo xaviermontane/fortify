@@ -1,6 +1,6 @@
 const strengthButton = document.getElementById("custom-strength");
 const passwordLengthInput = document.getElementById("length");
-const customInputs = document.getElementsByClassName("custom-checkbox");
+const customCharset = document.getElementsByClassName("custom-checkbox");
 
 function copyText() {
     let copyText = document.getElementById("password-gen");
