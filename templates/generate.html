@@ -16,7 +16,7 @@
             <option value="32">32</option>
             <option value="64">64</option>
         </select>
-        <button type="submit" id="generate">Generate</button>
+        <button type="submit" id="generate" onclick="customGenerate(event)">Generate</button>
     </form>
 </div>
 <div id="options-wp">
@@ -37,13 +37,11 @@
         <label><input type="checkbox" name="symbols" class="custom-checkbox">Symbols</label>
     </div>
 </div>
-{% if password %}
-<div class="password-container">
+<div class="password-container" style="display: none;" id="password-container">
     <h3>Your Password:</h3>
-    <input id="password-gen" type="text" value="{{ password }}" readonly>
+    <input id="password-gen" type="text" readonly>
     <button id="copy" onclick="copyText()">Copy</button>
 </div>
-{% endif %}
 {% endblock %}
 
 {% block scripts %}

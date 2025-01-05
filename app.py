@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from main import generate_password
 
 app = Flask(__name__)
@@ -14,6 +14,19 @@ def generate():
         length = int(request.form.get("length"))
         password = generate_password(length)
     return render_template("generate.html", title="Password Generator", password=password)
+
+@app.route("/generate_password", methods=["POST"])
+def generate_route():
+    data = request.json
+    length = int(data.get("length", 12))
+    custom_options = {
+        "uppercase": data.get("uppercase", False),
+        "lowercase": data.get("lowercase", False),
+        "numbers": data.get("numbers", False),
+        "symbols": data.get("symbols", False)
+    }
+    password = generate_password(length, custom_options)
+    return jsonify({"password": password})
 
 @app.route("/about")
 def about():
