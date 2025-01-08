@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, jsonify
-from main import generate_password
+from main import check_password, generate_password
 
 app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def fortify():
+    password = "foo"
+    check_password(password)
     return render_template("fortify.html", title="Password Strength Checker")
 
 @app.route("/generate", methods=["GET", "POST"])
