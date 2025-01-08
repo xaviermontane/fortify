@@ -17,7 +17,6 @@ function customGenerate(event) {
     });
 
     customOptions["length"] = passwordLengthInput.value;
-    console.log(customOptions)
 
     fetch("/generate_password", {
         method: "POST",
