@@ -1,4 +1,3 @@
-const strengthButton = document.getElementById("custom-strength");
 const passwordLengthInput = document.getElementById("length");
 const customCharset = document.getElementsByClassName("custom-checkbox");
 const generateButton = document.getElementById("generate");
@@ -8,22 +7,6 @@ function copyText() {
     copyText.select();
     navigator.clipboard.writeText(copyText.value);
 }
-
-passwordLengthInput.addEventListener("input", (e) => {
-    passwordLengthInput.value = e.target.value;
-});
-
-strengthButton.addEventListener("change", (e) => {
-    const strength = e.target.value;
-    const lengthMap = {
-        trolling: 8,
-        weak: 8,
-        secure: 32,
-        hax0r: 64,
-        default: 12
-    };
-    passwordLengthInput.value = lengthMap[strength] || lengthMap.default;
-});
 
 function customGenerate(event) {
     event.preventDefault();
