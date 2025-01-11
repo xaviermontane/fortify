@@ -2,7 +2,16 @@ import string
 import secrets
 from zxcvbn import zxcvbn
 
-def generate_password(length, custom_options):
+def evaluate_strength(password):
+    strength = zxcvbn(password)
+    result = {
+        "score": strength["score"],
+        "feedback": strength["feedback"],
+        "crack_times_display": strength["crack_times_display"]
+    }
+    return result
+
+def password_generate(length, custom_options):
     charset = ""
     options = {
         "uppercase": string.ascii_uppercase,
@@ -17,8 +26,3 @@ def generate_password(length, custom_options):
 
     password = "".join(secrets.choice(charset) for i in range(length))
     return password
-
-def check_password(password):
-    strength = zxcvbn(password)
-    print(f"Password Strength Score: {strength['score']}")
-    print(f"Feedback: {strength['feedback']}")
