@@ -46,9 +46,34 @@ hr {
 }
 
 #strength-details {
-    margin: 0 20px;
-    padding: 12px;
     text-align: center;
+    display: none;
+}
+
+#score {
+    width: 80%;
+    border-radius: 12px;
+    background-image: linear-gradient(to right, #00bfff, #00ffd5);
+    text-align: center;
+    border: 1px black solid;
+    display: inline-block;
+}
+
+#feedback {
+    background: #8dca81;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 8px;
+    padding: 8px;
+    display: inline-block;
+}
+
+#entropy-table {
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+    border: 2px black solid;
+    border-radius: 8px;
 }
 
 .form-container h2 {
